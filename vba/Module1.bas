@@ -11,27 +11,6 @@ For Each ctrl In frmPOS.fraProduct.Controls
     End If
 Next ctrl
 End Sub
-
-Sub AddItems(btn As MSForms.CommandButton)
-    
-    Dim Data()
-    Data = Split(btn.Tag, "|")
-    
-    Dim name As String
-    Dim price As Double
-    
-    name = Data(0)
-    price = CDbl(Data(1))
-    
-    With frmPOS.lstOrder
-    
-        .AddItem name
-         .List(0, 0) = price
-            
-    End With
-    
-
-End Sub
 '========================================================
 ' Project: Coffee Shop POS
 ' Author: Mariano Ferrer
@@ -45,3 +24,4 @@ End Sub
 '
 ' GitHub: https://github.com/cracka07
 '========================================================
+
